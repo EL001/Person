@@ -19,17 +19,18 @@ class Person(builtins.object)
        height: float
            Height of person in metres
        gender: str
-           Gender of person either male or female
+           Gender of person either male or female 
    
    
    bmi(self) -> float
+       
        Returns the Body Mass Index (BMI) ratio of this person.
        BMI is calculated as weight divided by the square of the height.
        Weight and height are given in kg and m respectively.
-   
-   
+       
    
    calories(self) -> float
+       
        Returns the kcal/day which indicates the basal metabolic rate(BMR).
        BMR is the minimum amount of calories the body needs when at rest.
        Using Mifflin-St Jeor Equation:
@@ -41,11 +42,13 @@ class Person(builtins.object)
    
    
    healthy_weight(self)
+       
        Returns the healthy weight limits using the bmi values recommended for maintaining a healhty weight                 
    
    
    
    ideal_weight(self) -> float
+       
        Returns the ideal weight of this person.
        Using B.J Devine Formular;
        If height is less than 1.524m then the program returns an ideal weight of 50kg for males, while for females it returns 45.5kg. 
