@@ -8,7 +8,7 @@ class Person(builtins.object)
    
    Methods defined here:
    
-   __init__(self, age, weight, height, gender)
+   __init__(self, age: int, weight: float, height: float, gender: type)
       
       Parameters
       ----------
