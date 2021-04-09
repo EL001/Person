@@ -1,31 +1,49 @@
-class Person():
-    def __init__ (self):
-        self.height = int(input("Input height in cm"))
-        self.weight = int(input("Input weight in kg"))
-        self.age = int(input("Input age"))
+import enum
 
-        
-    def BMI(self):
-        height = self.height
-        weight = self.weight
+class Gender(enum.Enum):
+    Male = 'male'
+    Female = 'female'
 
-        BMI = weight / (height/100)**2
 
-        if BMI <= 18.4:
-            print("You are underweight.")
-        elif BMI <= 24.9:
-            print("You are healthy.")
-        elif BMI <= 29.9:
-            print("You are over weight.")
-        elif BMI <= 34.9:
-            print("You are severely over weight.")
-        elif BMI <= 39.9:
-            print("You are obese.")
+class Person:
+
+    def __init__(self, age: int, weight: float, height: float, gender: Gender):        
+        self.age = age
+        self.weight = weight
+        self.height = height
+        self.gender = gender
+
+
+    def bmi(self) -> float:
+        return round(self.weight / (self.height ** 2), 2)
+    
+
+    def calories(self) -> float:
+        if self.gender == Gender.Male:
+            return round((10 * self.weight) + (625 * self.height) - (5 * self.age) + 5, 2)
         else:
-            print("You are severely obese.")
+            return round((10 * self.weight) + (625 * self.height) - (5 * self.age) - 161, 2)
 
 
-el = Person()
-el.BMI()
+    def healthy_weight(self):
+        return round(18.5 * (self.height ** 2), 2), round(24.9 * (self.height ** 2), 2)
 
+    
+    def ideal_weight(self) -> float:
+        if self.gender == Gender.Male:
+            if self.height <= 1.524:
+                return 50
+            else:
+                return round(50 + (2.3 * ((self.height - 1.524) / 0.0254)), 2)
+        else:
+            if self.height <= 1.524:
+                return 45.5
+            else:
+                return round(45.5 + (2.3 * ((self.height - 1.524) / 0.0254)), 2)
 
+    
+enoch = Person(24, 65, 1.6, Gender.Male)
+print(enoch.calories())
+print(enoch.bmi())
+print(enoch.ideal_weight())
+print(enoch.healthy_weight())
