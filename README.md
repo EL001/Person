@@ -1,14 +1,14 @@
 class Person(builtins.object)
    
    
-   Person(age: int, weight: float, height: float, gender: __main__.Gender)
+   Person(age: int, weight: float, height: float, gender: str)
    
    This class collects parameters; age, weight, height and gender for any person
-   and contains methods which returns the bmi, kcal used per day and ideal weight for any person
+   and contains methods which returns the bmi, kcal used per day, ideal weight range using the bmi and healthy weight for any person
    
    Methods defined here:
    
-   __init__(self, age: int, weight: float, height: float, gender: __main__.Gender)
+   __init__(self, age, weight, height, gender)
       
       Parameters
       ----------
