@@ -1,4 +1,4 @@
-class Person(builtins.object)
+class Person()
    
    
    Person(age: int, weight: float, height: float, gender: type)
