@@ -7,7 +7,8 @@ class Person(builtins.object)
    Methods defined here:
    
    __init__(self, age: int, weight: float, height: float, gender: __main__.Gender)
-       Parameters
+      
+      Parameters
       ----------
        age : int
            Age of person
@@ -18,12 +19,15 @@ class Person(builtins.object)
        gender: str
            Gender of person either male or female
    
+   
    bmi(self) -> float
        Returns the Body Mass Index (BMI) ratio of this person.
        BMI is calculated as weight divided by the square of the height.
        Weight and height are given in kg and m respectively.
    
-   **calories(self) -> float**
+   
+   
+   calories(self) -> float
        Returns the kcal/day which indicates the basal metabolic rate(BMR).
        BMR is the minimum amount of calories the body needs when at rest.
        Using Mifflin-St Jeor Equation:
@@ -33,8 +37,12 @@ class Person(builtins.object)
        female:
            BMR = (10 * weight) + (625 * height) - (5 * age) - 161
    
+   
+   
    healthy_weight(self)
        Returns the healthy weight limits using the bmi values recommended for maintaining a healhty              weight                 
+   
+   
    
    ideal_weight(self) -> float
        Returns the ideal weight of this person.
