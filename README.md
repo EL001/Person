@@ -23,7 +23,7 @@ class Person(builtins.object)
        BMI is calculated as weight divided by the square of the height.
        Weight and height are given in kg and m respectively.
    
-   calories(self) -> float
+   **calories(self) -> float**
        Returns the kcal/day which indicates the basal metabolic rate(BMR).
        BMR is the minimum amount of calories the body needs when at rest.
        Using Mifflin-St Jeor Equation:
