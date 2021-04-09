@@ -1,7 +1,7 @@
 class Person(builtins.object)
    
    
-   Person(age: int, weight: float, height: float, gender: str)
+   Person(age: int, weight: float, height: float, gender: type)
    
    This class collects parameters; age, weight, height and gender for any person
    and contains methods which returns the bmi, kcal used per day, ideal weight range using the bmi and healthy weight for any person
@@ -22,14 +22,14 @@ class Person(builtins.object)
            Gender of person either male or female 
    
    
-   bmi(self)
+   bmi(self) -> float
        
        Returns the Body Mass Index (BMI) ratio of this person.
        BMI is calculated as weight divided by the square of the height.
        Weight and height are given in kg and m respectively.
        
    
-   calories(self)
+   calories(self) -> float
        
        Returns the kcal/day which indicates the basal metabolic rate(BMR).
        BMR is the minimum amount of calories the body needs when at rest.
@@ -41,13 +41,13 @@ class Person(builtins.object)
    
    
    
-   healthy_weight(self)
+   healthy_weight(self) -> float
        
        Returns the healthy weight limits using the bmi values recommended for maintaining a healhty weight                 
    
    
    
-   ideal_weight(self)
+   ideal_weight(self) -> float
        
        Returns the ideal weight of this person.
        Using B.J Devine Formular;
