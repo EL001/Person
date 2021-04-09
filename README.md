@@ -14,7 +14,7 @@ class Person(builtins.object)
       ----------
        age : int
            Age of person
-      weight : float
+       weight : float
            Weight of person in kilograms
        height: float
            Height of person in metres
@@ -36,7 +36,7 @@ class Person(builtins.object)
        Using Mifflin-St Jeor Equation:
        male:
            BMR = (10 * weight) + (625 * height) - (5 * age) + 5
-      female:
+       female:
            BMR = (10 * weight) + (625 * height) - (5 * age) - 161
    
    
