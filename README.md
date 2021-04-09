@@ -1,4 +1,6 @@
 class Person(builtins.object)
+   
+   
    Person(age: int, weight: float, height: float, gender: __main__.Gender)
    
    This class collects parameters; age, weight, height and gender for any person
@@ -33,14 +35,13 @@ class Person(builtins.object)
        Using Mifflin-St Jeor Equation:
        male:
            BMR = (10 * weight) + (625 * height) - (5 * age) + 5
-       
-       female:
+      female:
            BMR = (10 * weight) + (625 * height) - (5 * age) - 161
    
    
    
    healthy_weight(self)
-       Returns the healthy weight limits using the bmi values recommended for maintaining a healhty              weight                 
+       Returns the healthy weight limits using the bmi values recommended for maintaining a healhty weight                 
    
    
    
@@ -53,7 +54,7 @@ class Person(builtins.object)
        male:
        50 + (2.3 * ((height - 1.524) / 0.0254))
        
- |      female: 
- |      if height is less than 1.524m then the program returns an ideal weight of 45.5kg. If person is taller than 1.524m ,
- |      the height is calculated as follows
- |      45.5 + (2.3 * ((height - 1.524) / 0.0254))
+       female: 
+       if height is less than 1.524m then the program returns an ideal weight of 45.5kg. If person is taller than 1.524m ,
+       the height is calculated as follows
+       45.5 + (2.3 * ((height - 1.524) / 0.0254))
